@@ -1,7 +1,7 @@
 # Личный проект «Глейси»
 
 * Студент: [Марина Гавриленко](https://up.htmlacademy.ru/htmlcss/35/user/2145249).
-* Наставник: `Неизвестно`.
+* Наставник: [Никита Сигов](https://htmlacademy.ru/profile/crazer).
 
 ---
 
