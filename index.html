@@ -7,22 +7,21 @@
   <body>
     <header class="page-header">
       <nav class="navigation">
+        <a class="navigation-link logo">
+          <span class="visually-hidden">Glassy shop</span>
+          <img class="page-header-logo" alt="Логотип магазин мороженого «Glassy shop»" src="">
+        </a>
         <ul class="navigation-list">
           <li class="navigation-item">
-            <a class="navigation-link">
-              <span class="visually-hidden">Glassy shop</span>
-              <img class="page-header-logo" alt="Логотип магазин мороженого «Glassy shop»" src="">
-            </a>
-          </li>
-          <li class="navigation-item">
             <a class="navigation-link" href="catalog.html">Каталог</a>
-            <select name="navigation-catalog-select" id="navigation-catalog-select" aria-label="Сортировка">
-              <option value="news">Новинки</option>
-              <option value="creamy">Сливочное</option>
-              <option value="sherbets">Щербеты</option>
-              <option value="fruits">Фруктовый лед</option>
-              <option value="melorin">Мелорин</option>
-            </select>
+            <img class="catalog-arrow-down" src="" alt="Стрелка вниз">
+            <ul class="navigation-catalog-select visually-hidden">
+              <li class="catalog-select-item"><span class="news">Новинки</span></li>
+              <li class="catalog-select-item">Сливочное</li>
+              <li class="catalog-select-item">Щербеты</li>
+              <li class="catalog-select-item">Фруктовый лед</li>
+              <li class="catalog-select-item">Мелорин</li>
+            </ul>
           </li>
           <li class="navigation-item">
             <a class="navigation-link" href="deliver.html">Доставка и оплата</a>
@@ -55,17 +54,17 @@
         <h2 class="choice-title">Нежный пломбир с клубничным джемом</h2>
         <p class="choice-description">Натуральное мороженое из свежих сливок и молока с вкуснейшим клубничным джемом – это идеальный десерт для всей семьи. </p>
         <a class="button button-order" href="#">Заказать</a>
+        <button class="slider-button slider-prev" type="button">
+          <span class="visually-hidden">Предыдущее мороженое</span>
+        </button>
         <div class="choice-slider">
           <img class="choice-slider-current" src="" alt="Нежный пломбир с клубничным джемом">
-          <button class="slider-button slider-prev" type="button">
-            <span class="visually-hidden">Предыдущее мороженое</span>
-          </button>
-          <button class="slider-button slider-next" type="button">
-            <span class="visually-hidden">Следующее мороженое</span>
-          </button>
           <img class="choice-slider-next" src="" alt="Сливочное мороженое со вкусом банана">
           <img class="choice-slider-next" src="" alt="Карамельный пломбир с маршмеллоу">
         </div>
+        <button class="slider-button slider-next" type="button">
+          <span class="visually-hidden">Следующее мороженое</span>
+        </button>
         <footer class="choice">
           <ol class="choice-slider-pagination">
             <li class="slider-pagination-item">
@@ -80,17 +79,17 @@
           </ol>
           <ul class="choice-social-list">
             <li class="choice-social-item">
-              <a class="button" href="https://t.me/htmlacademy">
+              <a class="social-link" href="https://t.me/htmlacademy">
                 <span class="visually-hidden">Телеграм</span>
               </a>
             </li>
             <li class="choice-social-item">
-              <a class="button" href="https://vk.com/htmlacademy">
+              <a class="social-link" href="https://vk.com/htmlacademy">
                 <span class="visually-hidden">ВКонтакте</span>
               </a>
             </li>
             <li class="choice-social-item">
-              <a class="button" href="https://www.youtube.com/user/htmlacademyru">
+              <a class="social-link" href="https://www.youtube.com/user/htmlacademyru">
                 <span class="visually-hidden">YouTube</span>
               </a>
             </li>
@@ -112,7 +111,7 @@
       </section>
       <section class="popular-tastes">
         <h2>Попробуйте самые популярные вкусы нашего мороженого</h2>
-        <ol class="tastes-list">
+        <ul class="tastes-list">
           <li class="tastes-item product-card">
             <a class="tastes-item-link product-card-link" href="product.html">
               <img class="tastes-image" src="" alt="Мороженое 'Малинка'">
@@ -149,7 +148,7 @@
             <b class="product-card-price">320 ₽/<span>кг</span></b>
             <a class="product-card-button button" href="#"><span class="visually-hidden">Положить в корзину</span></a>
           </li>
-        </ol>
+        </ul>
       </section>
       <section class="about">
         <h2 class="visually-hidden">О магазине Глейси</h2>
@@ -224,17 +223,17 @@
         <h2 class="visually-hidden">Социальные сети</h2>
         <ul class="ice-cream-choice-social-list">
           <li class="ice-cream-choice-social-item">
-            <a class="button" href="https://t.me/htmlacademy">
+            <a class="social-link" href="https://t.me/htmlacademy">
               <span class="visually-hidden">Телеграм</span>
             </a>
           </li>
           <li class="ice-cream-choice-social-item">
-            <a class="button" href="https://vk.com/htmlacademy">
+            <a class="social-link" href="https://vk.com/htmlacademy">
               <span class="visually-hidden">ВКонтакте</span>
             </a>
           </li>
           <li class="ice-cream-choice-social-item">
-            <a class="button" href="https://www.youtube.com/user/htmlacademyru">
+            <a class="social-link" href="https://www.youtube.com/user/htmlacademyru">
               <span class="visually-hidden">YouTube</span>
             </a>
           </li>
@@ -249,7 +248,7 @@
         </ul>
       </section>
       <section class="footer-about">
-        <img class="logo-html" src="" alt="Логотип HTML Academy">
+        <a class="htmlacademy-link" href="https://htmlacademy.ru/"><img class="logo-html" src="" alt="Логотип HTML Academy"></a>
         <p class="about-text">Сделано в <a class="htmlacademy-link" href="https://htmlacademy.ru/">.html academy</a> &#169; 2021</p>
       </section>
     </footer>
