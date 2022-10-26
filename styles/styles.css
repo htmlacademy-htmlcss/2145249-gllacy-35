@@ -107,6 +107,7 @@ body {
 
 .logo {
     padding: 0;
+    margin-right: 16px;
 }
 
 .navigation-catalog:after {
@@ -428,12 +429,24 @@ body {
     line-height: 46px;
     text-align: center;
     margin: 0 auto;
+    margin-bottom: 56px;
 }
 
 .about-advantages-list {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    display: grid;
+    grid-template-columns: 506px 506px;
+    gap: 40px 32px;
+}
+
+.about-advantages-item {
+    margin-left: 64px;
+}
+
+.about-advantages-description {
+    margin: 0;
 }
 
 /* news */
@@ -668,6 +681,9 @@ body {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    display: grid;
+    grid-template-columns: max-content max-content;
+    gap: 8px 24px;
 }
 
 .footer-navigation-item a {
