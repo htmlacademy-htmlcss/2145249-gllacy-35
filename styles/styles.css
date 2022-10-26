@@ -93,6 +93,7 @@ body {
 .navigation-user {
     max-width: 450px;
     margin-left: auto;
+    justify-content: right;
 }
 
 .navigation-link {
@@ -310,6 +311,10 @@ body {
 }
 
 /* product-cards */
+.popular-tastes h2 {
+    margin-bottom: 107px;
+}
+
 .popular-tastes {
     margin-bottom: 80px;
 }
@@ -319,11 +324,32 @@ body {
     margin: 0;
     padding: 0;
     margin-bottom: 16px;
+    display: grid;
+    grid-template-columns: repeat(4, 270px);
+    gap: 91px 30px;
+    margin-bottom: 16px;
 }
 
 .product-card {
     background: #FCFCFC;
     border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.product-card-content {
+    padding: 16px 40px 24px 40px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.card-price-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-top: auto;
+    align-items: center;
 }
 
 .product-card-link {
@@ -335,6 +361,8 @@ body {
     font-weight: 700;
     font-size: 20px;
     line-height: 24px;
+    margin-top: 0;
+    margin-bottom: 8px;
 }
 
 .product-card-description,
@@ -345,6 +373,8 @@ body {
 .product-card-description {
     width: 190px;
     min-height: 44px;
+    margin-top: 0;
+    margin-bottom: 16px;
 }
 
 .product-card-price {
@@ -355,11 +385,17 @@ body {
 
 .product-card-image {
     border-radius: 84px;
+    margin-top: -54px;
+    object-fit: contain;
 }
 
 .product-card-button {
     background: #FF2F64;
     border-radius: 26px;
+    min-width: 32px;
+    min-height: 32px;
+    box-sizing: border-box;
+    padding: 0;
 }
 
 /* about */
@@ -518,8 +554,28 @@ body {
     box-sizing: border-box;
 }
 
-.appointment-container-form p {
+.appointment-form-description {
     margin: 0 40px 32px 0;
+}
+
+.appointment-form {
+    display: grid;
+    grid-template-columns: 117px 287px;
+    gap: 20px 16px;
+}
+
+.appointment-form-adress {
+    grid-column: 1 / -1;
+}
+
+.appointment-form  .info {/*Иконки-подсказки мы позже вырвем из потока*/
+    display: none;
+  }
+
+.field-group {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
 }
 
 .form-label {
@@ -530,6 +586,8 @@ body {
 .appointment-button {
     display: block;
     margin: 0 auto;
+    grid-column: 1 / -1;
+    justify-self: center;
 }
 
 /* contacts */
@@ -672,7 +730,7 @@ body {
     font-size: 14px;
     line-height: 20px;
     display: flex;
-    margin-bottom: 44px;
+    margin-bottom: 95px;
 }
 
 .catalog-filter {
