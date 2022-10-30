@@ -47,7 +47,7 @@ body {
     border: 0;
     clip: rect(0 0 0 0);
     overflow: hidden;
- }
+}
 
 .button {
     font-family: inherit;
@@ -63,6 +63,8 @@ body {
     box-shadow: 0 4px 12px rgba(45, 52, 64, 0.1);
     border-radius: 26px;
     border: none;
+    cursor: pointer;
+    display: inline-block;
 }
 
 .button[type="submit"],
@@ -97,12 +99,23 @@ body {
 }
 
 .navigation-link {
+    position: relative;
     display: block;
     padding: 8px 16px;
     line-height: 20px;
     text-align: center;
     text-decoration: none;
     color: #2D3440;
+}
+
+.navigation-icon {
+    position: absolute;
+    top: 16px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    fill: #2D3440;
 }
 
 .logo {
@@ -148,7 +161,8 @@ body {
     margin-bottom: 80px;
 }
 
-.slider-prev, .slider-next {
+.slider-prev,
+.slider-next {
     width: 38px;
     height: 38px;
     margin-top: 258px;
@@ -166,7 +180,8 @@ body {
     align-items: center;
 }
 
-.choice-slider-next, .choice-slider-current {
+.choice-slider-next,
+.choice-slider-current {
     display: block;
     margin: auto;
 }
@@ -186,7 +201,8 @@ body {
     justify-content: space-between;
 }
 
-.choice-slider-pagination, .choice-social-list {
+.choice-slider-pagination,
+.choice-social-list {
     display: flex;
     list-style-type: none;
     margin: 0;
@@ -581,9 +597,10 @@ body {
     grid-column: 1 / -1;
 }
 
-.appointment-form  .info {/*Иконки-подсказки мы позже вырвем из потока*/
+.appointment-form .info {
+    /*Иконки-подсказки мы позже вырвем из потока*/
     display: none;
-  }
+}
 
 .field-group {
     margin: 0;
@@ -763,7 +780,7 @@ body {
     margin-right: 24px;
 }
 
-.catalog-filter > *:not(:last-child):not(:nth-child(4n))  {
+.catalog-filter > *:not(:last-child):not(:nth-child(4n)) {
     margin-bottom: 16px;
 }
 
@@ -805,6 +822,7 @@ body {
     align-self: center;
     width: 185px;
 }
+
 .pagination-footer {
     display: flex;
     padding: 41px 0 41px 168px;
