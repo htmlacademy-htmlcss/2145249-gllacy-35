@@ -8,6 +8,7 @@
   </head>
 
   <body>
+
     <header class="page-header">
       <nav class="navigation">
         <a class="navigation-link logo" href="index.html">
@@ -22,16 +23,18 @@
                 viewBox="0 0 16 17" fill="none">
                 <path fill-rule="evenodd" clip-rule="evenodd"
                   d="M3.8 7.05a.67.67 0 1 0-.93.95l4.66 4.66a.66.66 0 0 0 .95 0L13.14 8a.67.67 0 0 0-.94-.95L8 11.25l-4.2-4.2Z"
-                  fill="#2D3440" />
+                  fill="currentColor" />
               </svg>
             </a>
-            <ul class="navigation-catalog-select visually-hidden">
-              <li class="catalog-select-item"><span class="novelties">Новинки</span></li>
-              <li class="catalog-select-item">Сливочное</li>
-              <li class="catalog-select-item">Щербеты</li>
-              <li class="catalog-select-item">Фруктовый лед</li>
-              <li class="catalog-select-item">Мелорин</li>
-            </ul>
+            <div class="popover popover-catalog">
+              <ul class="navigation-catalog-select">
+                <li class="catalog-select-item novelties-item"><a href="catalog.html" class="novelties">Новинки</a></li>
+                <li class="catalog-select-item"><a href="#">Сливочное</a></li>
+                <li class="catalog-select-item"><a href="#">Щербеты</a></li>
+                <li class="catalog-select-item"><a href="#">Фруктовый лед</a></li>
+                <li class="catalog-select-item"><a href="#">Мелорин</a></li>
+              </ul>
+            </div>
           </li>
           <li class="navigation-item">
             <a class="navigation-link" href="deliver.html">Доставка и оплата</a>
@@ -48,29 +51,105 @@
           <li class="navigation-item">
             <a class="navigation-link" href="#">
               <svg class="navigation-icon" aria-hidden="true" focusable="false" width="14" height="14" fill="none">
-                <path fill="#2D3440" fill-rule="evenodd"
+                <path fill="currentColor" fill-rule="evenodd"
                   d="M1.663 6.188a4.667 4.667 0 1 1 8.028 3.237.673.673 0 0 0-.123.124 4.667 4.667 0 0 1-7.904-3.361Zm8.412 4.688a5.975 5.975 0 0 1-3.745 1.312 6 6 0 1 1 6-6 5.975 5.975 0 0 1-1.312 3.745l2.45 2.45a.667.667 0 0 1 0 .943.667.667 0 0 1-.943 0l-2.45-2.45Z"
                   clip-rule="evenodd" />
               </svg>
               <span class="visually-hidden">Поиск</span></a>
+            <div class="popover popover-search">
+              <form class="search-form" action="https://echo.htmlacademy.ru/" method="post">
+                <input class="search-form-field field" type="text" id="search-login" name="search-login"
+                  placeholder="Поиск по сайту">
+              </form>
+            </div>
           </li>
           <li class="navigation-item">
             <a class="navigation-link navigation-link-text" href="#">
               <svg class="navigation-icon" aria-hidden="true" focusable="false" width="14" height="15" fill="none">
-                <path fill="#2D3440" fill-rule="evenodd"
+                <path fill="currentColor" fill-rule="evenodd"
                   d="M8 1.525a.667.667 0 0 1 .667-.667h2.666a2 2 0 0 1 2 2v9.333a2 2 0 0 1-2 2H8.667a.667.667 0 0 1 0-1.333h2.666a.667.667 0 0 0 .667-.667V2.858a.666.666 0 0 0-.667-.667H8.667A.667.667 0 0 1 8 1.525ZM4.862 3.72a.667.667 0 0 1 .943 0l3.329 3.329a.673.673 0 0 1 .129.177.664.664 0 0 1 .07.299.664.664 0 0 1-.2.476l-3.328 3.328a.667.667 0 1 1-.943-.942L7.057 8.19H.667a.667.667 0 1 1 0-1.333h6.39L4.862 4.663a.667.667 0 0 1 0-.943Z"
                   clip-rule="evenodd" />
               </svg>
               Вход</a>
+            <div class="popover popover-enter">
+              <div class="popover-content">
+                <h2 class="popover-title">Личный кабинет</h2>
+                <form class="auth-form" action="https://echo.htmlacademy.ru/" method="post">
+                  <p class="field-group">
+                    <label class="visually-hidden" for="auth-login">Логин</label>
+                    <input class="auth-form-field field" type="text" id="auth-login" name="auth-login"
+                      placeholder="email@example.com">
+                  </p>
+                  <p class="field-group">
+                    <label class="visually-hidden" for="auth-password">Пароль</label>
+                    <input class="auth-form-field field" type="password" id="auth-password" name="auth-password"
+                      placeholder="&#x25CF;&#x25CF;&#x25CF;&#x25CF;&#x25CF;&#x25CF;">
+                  </p>
+                  <div class="field-group auth-form-user-options">
+                    <button class="button popover-cart-button" type="submit">Войти</button>
+                    <a class="auth-form-recovery auth-form-link" href="#">Забыли пароль?</a>
+                    <a class="auth-form-register auth-form-link" href="#">Регистрация</a>
+                  </div>
+                </form>
+              </div>
+            </div>
           </li>
           <li class="navigation-item">
             <a class="navigation-link navigation-link-text" href="#">
               <svg class="navigation-icon" aria-hidden="true" focusable="false" width="15" height="14" fill="none">
-                <path fill="#2D3440" fill-rule="evenodd"
+                <path fill="currentColor" fill-rule="evenodd"
                   d="M1.167.108a.667.667 0 1 0 0 1.333h1.77l.468 2.336a.664.664 0 0 0 .011.053l.967 4.833a1.826 1.826 0 0 0 1.819 1.47h5.62a1.826 1.826 0 0 0 1.819-1.47l.001-.005.927-4.861a.667.667 0 0 0-.655-.792H4.611L4.138.644a.667.667 0 0 0-.654-.536H1.167ZM5.69 8.402l-.813-4.064h8.23l-.775 4.067a.492.492 0 0 1-.492.395H6.183a.492.492 0 0 1-.492-.397Zm-1.134 3.961a1.246 1.246 0 1 1 2.492 0 1.246 1.246 0 0 1-2.492 0Zm6.374 0a1.246 1.246 0 1 1 2.491 0 1.246 1.246 0 0 1-2.491 0Z"
                   clip-rule="evenodd" />
               </svg>
               2 товара</a>
+            <div class="popover popover-cart">
+              <div class="popover-content">
+                <h2 class="popover-title">Корзина</h2>
+                <ul class="cart-items-list">
+                  <li class="cart-item">
+                    <div class="cart-item-wrapper">
+                      <img class="cart-item-image" src="images/catalog/ice-cream/raspberry.jpg" width="46" height="46"
+                        alt="Мороженое 'Малинка'">
+                      <p class="cart-item-title">Малинка</p>
+                      <p class="cart-item-subtitle">1 кг х 310 ₽</p>
+                    </div>
+                    <p class="cart-item-price">310 ₽</p>
+                    <button type="button" class="cart-item-button button">
+                      <svg width="16" height="16" fill="none" viewBox="0 0 16 16">
+                        <path fill="currentColor" fill-rule="evenodd"
+                          d="M12.803 4.138a.667.667 0 1 0-.943-.943L8 7.056l-3.862-3.86a.667.667 0 1 0-.943.942L7.056 8l-3.86 3.861a.667.667 0 1 0 .942.943L8 8.942l3.861 3.861a.667.667 0 1 0 .943-.943L8.942 8l3.861-3.862Z"
+                          clip-rule="evenodd" />
+                      </svg>
+                      <span class="visually-hidden">Удалить из корзины</span>
+                    </button>
+                  </li>
+                  <li class="cart-item">
+                    <div class="cart-item-wrapper">
+                      <img class="cart-item-image" src="images/catalog/ice-cream/bubble-gum.jpg" width="46" height="46"
+                        alt="Мороженое 'Бабл-гам'">
+                      <p class="cart-item-title">Бабл-гам</p>
+                      <p class="cart-item-subtitle">1,5 кг х 320 ₽</p>
+                    </div>
+                    <p class="cart-item-price">480 ₽</p>
+                    <button type="button" class="cart-item-button button">
+                      <svg width="16" height="16" fill="none" viewBox="0 0 16 16">
+                        <path fill="currentColor" fill-rule="evenodd"
+                          d="M12.803 4.138a.667.667 0 1 0-.943-.943L8 7.056l-3.862-3.86a.667.667 0 1 0-.943.942L7.056 8l-3.86 3.861a.667.667 0 1 0 .942.943L8 8.942l3.861 3.861a.667.667 0 1 0 .943-.943L8.942 8l3.861-3.862Z"
+                          clip-rule="evenodd" />
+                      </svg>
+                      <span class="visually-hidden">Удалить из корзины</span>
+                    </button>
+                  </li>
+                </ul>
+                <div class="popover-footer">
+                  <button class="button popover-cart-button" type="submit">Оформить заказ</button>
+                  <p class="popover-footer-price">Итого: 790 ₽</p>
+                </div>
+              </div>
+            </div>
+            <div class="popover popover-cart popover-cart-empty">
+              <h2 class="popover-title">Ваша корзина пока пуста</h2>
+            </div>
           </li>
         </ul>
       </nav>
@@ -134,8 +213,16 @@
                 <li class="catalog-filter-item">
                   <label class="control">
                     <input class="visually-hidden control-input" type="radio" name="product-group" value="percent-0">
-                    <svg class="control-mark control-mark-checked" width="16" height="16" viewBox="0 0 16 16" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M14.67 8A6.67 6.67 0 1 1 1.33 8a6.67 6.67 0 0 1 13.34 0ZM8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16Zm0-5a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/></svg>
-                      <svg class="control-mark control-mark-nochecked" width="16" height="16" viewBox="0 0 16 16" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M8 1.33a6.67 6.67 0 0 0 0 13.34A6.67 6.67 0 0 0 8 1.33ZM8 16A8 8 0 1 1 8 0a8 8 0 0 1 0 16Z"/></svg>
+                    <svg class="control-mark control-mark-checked" width="16" height="16" viewBox="0 0 16 16"
+                      fill="none">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M14.67 8A6.67 6.67 0 1 1 1.33 8a6.67 6.67 0 0 1 13.34 0ZM8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16Zm0-5a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
+                    </svg>
+                    <svg class="control-mark control-mark-nochecked" width="16" height="16" viewBox="0 0 16 16"
+                      fill="none">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M8 1.33a6.67 6.67 0 0 0 0 13.34A6.67 6.67 0 0 0 8 1.33ZM8 16A8 8 0 1 1 8 0a8 8 0 0 1 0 16Z" />
+                    </svg>
                     <span class="control-label">0%</span>
                   </label>
                 </li>
@@ -143,8 +230,16 @@
                   <label class="control">
                     <input class=" visually-hidden control-input" type="radio" name="product-group"
                       value="to-10-persent" checked>
-                      <svg class="control-mark control-mark-checked" width="16" height="16" viewBox="0 0 16 16" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M14.67 8A6.67 6.67 0 1 1 1.33 8a6.67 6.67 0 0 1 13.34 0ZM8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16Zm0-5a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/></svg>
-                      <svg class="control-mark control-mark-nochecked" width="16" height="16" viewBox="0 0 16 16" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M8 1.33a6.67 6.67 0 0 0 0 13.34A6.67 6.67 0 0 0 8 1.33ZM8 16A8 8 0 1 1 8 0a8 8 0 0 1 0 16Z"/></svg>
+                    <svg class="control-mark control-mark-checked" width="16" height="16" viewBox="0 0 16 16"
+                      fill="none">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M14.67 8A6.67 6.67 0 1 1 1.33 8a6.67 6.67 0 0 1 13.34 0ZM8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16Zm0-5a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
+                    </svg>
+                    <svg class="control-mark control-mark-nochecked" width="16" height="16" viewBox="0 0 16 16"
+                      fill="none">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M8 1.33a6.67 6.67 0 0 0 0 13.34A6.67 6.67 0 0 0 8 1.33ZM8 16A8 8 0 1 1 8 0a8 8 0 0 1 0 16Z" />
+                    </svg>
                     <span class="control-label">до 10%</span>
                   </label>
                 </li>
@@ -152,8 +247,16 @@
                   <label class="control">
                     <input class=" visually-hidden control-input" type="radio" name="product-group"
                       value="to-30-persent">
-                      <svg class="control-mark control-mark-checked" width="16" height="16" viewBox="0 0 16 16" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M14.67 8A6.67 6.67 0 1 1 1.33 8a6.67 6.67 0 0 1 13.34 0ZM8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16Zm0-5a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/></svg>
-                      <svg class="control-mark control-mark-nochecked" width="16" height="16" viewBox="0 0 16 16" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M8 1.33a6.67 6.67 0 0 0 0 13.34A6.67 6.67 0 0 0 8 1.33ZM8 16A8 8 0 1 1 8 0a8 8 0 0 1 0 16Z"/></svg>
+                    <svg class="control-mark control-mark-checked" width="16" height="16" viewBox="0 0 16 16"
+                      fill="none">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M14.67 8A6.67 6.67 0 1 1 1.33 8a6.67 6.67 0 0 1 13.34 0ZM8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16Zm0-5a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
+                    </svg>
+                    <svg class="control-mark control-mark-nochecked" width="16" height="16" viewBox="0 0 16 16"
+                      fill="none">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M8 1.33a6.67 6.67 0 0 0 0 13.34A6.67 6.67 0 0 0 8 1.33ZM8 16A8 8 0 1 1 8 0a8 8 0 0 1 0 16Z" />
+                    </svg>
                     <span class="control-label">до 30%</span>
                   </label>
                 </li>
@@ -161,8 +264,16 @@
                   <label class="control">
                     <input class="visually-hidden control-input" type="radio" name="product-group"
                       value="over-30-persent">
-                      <svg class="control-mark control-mark-checked" width="16" height="16" viewBox="0 0 16 16" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M14.67 8A6.67 6.67 0 1 1 1.33 8a6.67 6.67 0 0 1 13.34 0ZM8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16Zm0-5a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/></svg>
-                      <svg class="control-mark control-mark-nochecked" width="16" height="16" viewBox="0 0 16 16" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M8 1.33a6.67 6.67 0 0 0 0 13.34A6.67 6.67 0 0 0 8 1.33ZM8 16A8 8 0 1 1 8 0a8 8 0 0 1 0 16Z"/></svg>
+                    <svg class="control-mark control-mark-checked" width="16" height="16" viewBox="0 0 16 16"
+                      fill="none">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M14.67 8A6.67 6.67 0 1 1 1.33 8a6.67 6.67 0 0 1 13.34 0ZM8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16Zm0-5a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
+                    </svg>
+                    <svg class="control-mark control-mark-nochecked" width="16" height="16" viewBox="0 0 16 16"
+                      fill="none">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M8 1.33a6.67 6.67 0 0 0 0 13.34A6.67 6.67 0 0 0 8 1.33ZM8 16A8 8 0 1 1 8 0a8 8 0 0 1 0 16Z" />
+                    </svg>
                     <span class="control-label">выше 30%</span>
                   </label>
                 </li>
@@ -174,11 +285,13 @@
                 <li class="catalog-filter-item">
                   <label class="control">
                     <input class="visually-hidden control-input" type="checkbox" name="choco" checked>
-                    <svg class="control-mark control-mark-checked" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <svg class="control-mark control-mark-checked" width="16" height="16" viewBox="0 0 16 16"
+                      fill="none">
                       <path fill-rule="evenodd" clip-rule="evenodd"
-                        d="M1.62 1.62a.96.96 0 0 1 .68-.29h8.95a.67.67 0 1 0 0-1.33H2.3A2.3 2.3 0 0 0 0 2.3v11.4A2.3 2.3 0 0 0 2.3 16h11.4a2.3 2.3 0 0 0 2.3-2.3V8a.67.67 0 0 0-1.34 0v5.7a.96.96 0 0 1-.96.97H2.3a.96.96 0 0 1-.97-.97V2.3c0-.26.1-.5.29-.68Zm14.2.32a.67.67 0 1 0-.97-.92L7.6 8.66 5.78 6.73a.67.67 0 0 0-.97.91l2.32 2.45a.67.67 0 0 0 .97 0l7.72-8.15Z"/>
+                        d="M1.62 1.62a.96.96 0 0 1 .68-.29h8.95a.67.67 0 1 0 0-1.33H2.3A2.3 2.3 0 0 0 0 2.3v11.4A2.3 2.3 0 0 0 2.3 16h11.4a2.3 2.3 0 0 0 2.3-2.3V8a.67.67 0 0 0-1.34 0v5.7a.96.96 0 0 1-.96.97H2.3a.96.96 0 0 1-.97-.97V2.3c0-.26.1-.5.29-.68Zm14.2.32a.67.67 0 1 0-.97-.92L7.6 8.66 5.78 6.73a.67.67 0 0 0-.97.91l2.32 2.45a.67.67 0 0 0 .97 0l7.72-8.15Z" />
                     </svg>
-                    <svg class="control-mark control-mark-nochecked" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <svg class="control-mark control-mark-nochecked" width="16" height="16" viewBox="0 0 16 16"
+                      fill="none">
                       <path fill-rule="evenodd" clip-rule="evenodd"
                         d="M1.62 1.62a.96.96 0 0 1 .68-.29h11.4c.24 0 .34.03.4.06a1 1 0 0 1 .28.23c.21.2.29.43.29.68V13.7a.96.96 0 0 1-.97.96H2.3a.96.96 0 0 1-.97-.96V2.3c0-.26.1-.5.29-.68Zm14.22 12.92A2.3 2.3 0 0 1 13.7 16H2.3A2.3 2.3 0 0 1 0 13.7V2.3A2.3 2.3 0 0 1 1.46.16c.11-.1.27-.16.43-.16H13.7c.34 0 .65.04.94.17.28.12.5.31.69.5.48.48.67 1.06.67 1.63v11.8c0 .18-.06.33-.16.44Z" />
                     </svg>
@@ -188,11 +301,13 @@
                 <li class="catalog-filter-item">
                   <label class="control">
                     <input class="visually-hidden control-input" type="checkbox" name="sugar" checked>
-                    <svg class="control-mark control-mark-checked" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <svg class="control-mark control-mark-checked" width="16" height="16" viewBox="0 0 16 16"
+                      fill="none">
                       <path fill-rule="evenodd" clip-rule="evenodd"
-                        d="M1.62 1.62a.96.96 0 0 1 .68-.29h8.95a.67.67 0 1 0 0-1.33H2.3A2.3 2.3 0 0 0 0 2.3v11.4A2.3 2.3 0 0 0 2.3 16h11.4a2.3 2.3 0 0 0 2.3-2.3V8a.67.67 0 0 0-1.34 0v5.7a.96.96 0 0 1-.96.97H2.3a.96.96 0 0 1-.97-.97V2.3c0-.26.1-.5.29-.68Zm14.2.32a.67.67 0 1 0-.97-.92L7.6 8.66 5.78 6.73a.67.67 0 0 0-.97.91l2.32 2.45a.67.67 0 0 0 .97 0l7.72-8.15Z"/>
+                        d="M1.62 1.62a.96.96 0 0 1 .68-.29h8.95a.67.67 0 1 0 0-1.33H2.3A2.3 2.3 0 0 0 0 2.3v11.4A2.3 2.3 0 0 0 2.3 16h11.4a2.3 2.3 0 0 0 2.3-2.3V8a.67.67 0 0 0-1.34 0v5.7a.96.96 0 0 1-.96.97H2.3a.96.96 0 0 1-.97-.97V2.3c0-.26.1-.5.29-.68Zm14.2.32a.67.67 0 1 0-.97-.92L7.6 8.66 5.78 6.73a.67.67 0 0 0-.97.91l2.32 2.45a.67.67 0 0 0 .97 0l7.72-8.15Z" />
                     </svg>
-                    <svg class="control-mark control-mark-nochecked" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <svg class="control-mark control-mark-nochecked" width="16" height="16" viewBox="0 0 16 16"
+                      fill="none">
                       <path fill-rule="evenodd" clip-rule="evenodd"
                         d="M1.62 1.62a.96.96 0 0 1 .68-.29h11.4c.24 0 .34.03.4.06a1 1 0 0 1 .28.23c.21.2.29.43.29.68V13.7a.96.96 0 0 1-.97.96H2.3a.96.96 0 0 1-.97-.96V2.3c0-.26.1-.5.29-.68Zm14.22 12.92A2.3 2.3 0 0 1 13.7 16H2.3A2.3 2.3 0 0 1 0 13.7V2.3A2.3 2.3 0 0 1 1.46.16c.11-.1.27-.16.43-.16H13.7c.34 0 .65.04.94.17.28.12.5.31.69.5.48.48.67 1.06.67 1.63v11.8c0 .18-.06.33-.16.44Z" />
                     </svg>
@@ -202,11 +317,13 @@
                 <li class="catalog-filter-item">
                   <label class="control">
                     <input class="visually-hidden control-input" type="checkbox" name="fruit">
-                    <svg class="control-mark control-mark-checked" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <svg class="control-mark control-mark-checked" width="16" height="16" viewBox="0 0 16 16"
+                      fill="none">
                       <path fill-rule="evenodd" clip-rule="evenodd"
-                        d="M1.62 1.62a.96.96 0 0 1 .68-.29h8.95a.67.67 0 1 0 0-1.33H2.3A2.3 2.3 0 0 0 0 2.3v11.4A2.3 2.3 0 0 0 2.3 16h11.4a2.3 2.3 0 0 0 2.3-2.3V8a.67.67 0 0 0-1.34 0v5.7a.96.96 0 0 1-.96.97H2.3a.96.96 0 0 1-.97-.97V2.3c0-.26.1-.5.29-.68Zm14.2.32a.67.67 0 1 0-.97-.92L7.6 8.66 5.78 6.73a.67.67 0 0 0-.97.91l2.32 2.45a.67.67 0 0 0 .97 0l7.72-8.15Z"/>
+                        d="M1.62 1.62a.96.96 0 0 1 .68-.29h8.95a.67.67 0 1 0 0-1.33H2.3A2.3 2.3 0 0 0 0 2.3v11.4A2.3 2.3 0 0 0 2.3 16h11.4a2.3 2.3 0 0 0 2.3-2.3V8a.67.67 0 0 0-1.34 0v5.7a.96.96 0 0 1-.96.97H2.3a.96.96 0 0 1-.97-.97V2.3c0-.26.1-.5.29-.68Zm14.2.32a.67.67 0 1 0-.97-.92L7.6 8.66 5.78 6.73a.67.67 0 0 0-.97.91l2.32 2.45a.67.67 0 0 0 .97 0l7.72-8.15Z" />
                     </svg>
-                    <svg class="control-mark control-mark-nochecked" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <svg class="control-mark control-mark-nochecked" width="16" height="16" viewBox="0 0 16 16"
+                      fill="none">
                       <path fill-rule="evenodd" clip-rule="evenodd"
                         d="M1.62 1.62a.96.96 0 0 1 .68-.29h11.4c.24 0 .34.03.4.06a1 1 0 0 1 .28.23c.21.2.29.43.29.68V13.7a.96.96 0 0 1-.97.96H2.3a.96.96 0 0 1-.97-.96V2.3c0-.26.1-.5.29-.68Zm14.22 12.92A2.3 2.3 0 0 1 13.7 16H2.3A2.3 2.3 0 0 1 0 13.7V2.3A2.3 2.3 0 0 1 1.46.16c.11-.1.27-.16.43-.16H13.7c.34 0 .65.04.94.17.28.12.5.31.69.5.48.48.67 1.06.67 1.63v11.8c0 .18-.06.33-.16.44Z" />
                     </svg>
@@ -216,11 +333,13 @@
                 <li class="catalog-filter-item">
                   <label class="control">
                     <input class="visually-hidden control-input" type="checkbox" name="syrup">
-                    <svg class="control-mark control-mark-checked" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <svg class="control-mark control-mark-checked" width="16" height="16" viewBox="0 0 16 16"
+                      fill="none">
                       <path fill-rule="evenodd" clip-rule="evenodd"
-                        d="M1.62 1.62a.96.96 0 0 1 .68-.29h8.95a.67.67 0 1 0 0-1.33H2.3A2.3 2.3 0 0 0 0 2.3v11.4A2.3 2.3 0 0 0 2.3 16h11.4a2.3 2.3 0 0 0 2.3-2.3V8a.67.67 0 0 0-1.34 0v5.7a.96.96 0 0 1-.96.97H2.3a.96.96 0 0 1-.97-.97V2.3c0-.26.1-.5.29-.68Zm14.2.32a.67.67 0 1 0-.97-.92L7.6 8.66 5.78 6.73a.67.67 0 0 0-.97.91l2.32 2.45a.67.67 0 0 0 .97 0l7.72-8.15Z"/>
+                        d="M1.62 1.62a.96.96 0 0 1 .68-.29h8.95a.67.67 0 1 0 0-1.33H2.3A2.3 2.3 0 0 0 0 2.3v11.4A2.3 2.3 0 0 0 2.3 16h11.4a2.3 2.3 0 0 0 2.3-2.3V8a.67.67 0 0 0-1.34 0v5.7a.96.96 0 0 1-.96.97H2.3a.96.96 0 0 1-.97-.97V2.3c0-.26.1-.5.29-.68Zm14.2.32a.67.67 0 1 0-.97-.92L7.6 8.66 5.78 6.73a.67.67 0 0 0-.97.91l2.32 2.45a.67.67 0 0 0 .97 0l7.72-8.15Z" />
                     </svg>
-                    <svg class="control-mark control-mark-nochecked" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <svg class="control-mark control-mark-nochecked" width="16" height="16" viewBox="0 0 16 16"
+                      fill="none">
                       <path fill-rule="evenodd" clip-rule="evenodd"
                         d="M1.62 1.62a.96.96 0 0 1 .68-.29h11.4c.24 0 .34.03.4.06a1 1 0 0 1 .28.23c.21.2.29.43.29.68V13.7a.96.96 0 0 1-.97.96H2.3a.96.96 0 0 1-.97-.96V2.3c0-.26.1-.5.29-.68Zm14.22 12.92A2.3 2.3 0 0 1 13.7 16H2.3A2.3 2.3 0 0 1 0 13.7V2.3A2.3 2.3 0 0 1 1.46.16c.11-.1.27-.16.43-.16H13.7c.34 0 .65.04.94.17.28.12.5.31.69.5.48.48.67 1.06.67 1.63v11.8c0 .18-.06.33-.16.44Z" />
                     </svg>
@@ -230,11 +349,13 @@
                 <li class="catalog-filter-item">
                   <label class="control">
                     <input class="visually-hidden control-input" type="checkbox" name="jam">
-                    <svg class="control-mark control-mark-checked" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <svg class="control-mark control-mark-checked" width="16" height="16" viewBox="0 0 16 16"
+                      fill="none">
                       <path fill-rule="evenodd" clip-rule="evenodd"
-                        d="M1.62 1.62a.96.96 0 0 1 .68-.29h8.95a.67.67 0 1 0 0-1.33H2.3A2.3 2.3 0 0 0 0 2.3v11.4A2.3 2.3 0 0 0 2.3 16h11.4a2.3 2.3 0 0 0 2.3-2.3V8a.67.67 0 0 0-1.34 0v5.7a.96.96 0 0 1-.96.97H2.3a.96.96 0 0 1-.97-.97V2.3c0-.26.1-.5.29-.68Zm14.2.32a.67.67 0 1 0-.97-.92L7.6 8.66 5.78 6.73a.67.67 0 0 0-.97.91l2.32 2.45a.67.67 0 0 0 .97 0l7.72-8.15Z"/>
+                        d="M1.62 1.62a.96.96 0 0 1 .68-.29h8.95a.67.67 0 1 0 0-1.33H2.3A2.3 2.3 0 0 0 0 2.3v11.4A2.3 2.3 0 0 0 2.3 16h11.4a2.3 2.3 0 0 0 2.3-2.3V8a.67.67 0 0 0-1.34 0v5.7a.96.96 0 0 1-.96.97H2.3a.96.96 0 0 1-.97-.97V2.3c0-.26.1-.5.29-.68Zm14.2.32a.67.67 0 1 0-.97-.92L7.6 8.66 5.78 6.73a.67.67 0 0 0-.97.91l2.32 2.45a.67.67 0 0 0 .97 0l7.72-8.15Z" />
                     </svg>
-                    <svg class="control-mark control-mark-nochecked" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <svg class="control-mark control-mark-nochecked" width="16" height="16" viewBox="0 0 16 16"
+                      fill="none">
                       <path fill-rule="evenodd" clip-rule="evenodd"
                         d="M1.62 1.62a.96.96 0 0 1 .68-.29h11.4c.24 0 .34.03.4.06a1 1 0 0 1 .28.23c.21.2.29.43.29.68V13.7a.96.96 0 0 1-.97.96H2.3a.96.96 0 0 1-.97-.96V2.3c0-.26.1-.5.29-.68Zm14.22 12.92A2.3 2.3 0 0 1 13.7 16H2.3A2.3 2.3 0 0 1 0 13.7V2.3A2.3 2.3 0 0 1 1.46.16c.11-.1.27-.16.43-.16H13.7c.34 0 .65.04.94.17.28.12.5.31.69.5.48.48.67 1.06.67 1.63v11.8c0 .18-.06.33-.16.44Z" />
                     </svg>

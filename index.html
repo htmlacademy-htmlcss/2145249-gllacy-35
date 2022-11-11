@@ -17,7 +17,7 @@
         </a>
         <ul class="navigation-list navigation-info">
           <li class="navigation-item">
-            <a class="navigation-link navigation-catalog" href="catalog.html">Каталог
+            <a class="navigation-link navigation-catalog" href="#">Каталог
               <svg class="navigation-icon" aria-hidden="true" focusable="false" width="16" height="17"
                 viewBox="0 0 16 17" fill="none">
                 <path fill-rule="evenodd" clip-rule="evenodd"
@@ -27,13 +27,13 @@
             </a>
             <div class="popover popover-catalog">
               <ul class="navigation-catalog-select">
-                <li class="catalog-select-item novelties-item"><a href="#" class="novelties">Новинки</a></li>
+                <li class="catalog-select-item novelties-item"><a href="catalog.html" class="novelties">Новинки</a></li>
                 <li class="catalog-select-item"><a href="#">Сливочное</a></li>
                 <li class="catalog-select-item"><a href="#">Щербеты</a></li>
                 <li class="catalog-select-item"><a href="#">Фруктовый лед</a></li>
                 <li class="catalog-select-item"><a href="#">Мелорин</a></li>
               </ul>
-          </div>
+            </div>
           </li>
           <li class="navigation-item">
             <a class="navigation-link" href="deliver.html">Доставка и оплата</a>
@@ -55,12 +55,12 @@
                   clip-rule="evenodd" />
               </svg>
               <span class="visually-hidden">Поиск</span></a>
-              <div class="popover popover-search">
-                  <form class="search-form" action="https://echo.htmlacademy.ru/" method="post">
-                      <input class="search-form-field field" type="text" id="search-login" name="search-login"
-                        placeholder="Поиск по сайту">
-                  </form>
-              </div>
+            <div class="popover popover-search">
+              <form class="search-form" action="https://echo.htmlacademy.ru/" method="post">
+                <input class="search-form-field field" type="text" id="search-login" name="search-login"
+                  placeholder="Поиск по сайту">
+              </form>
+            </div>
           </li>
           <li class="navigation-item">
             <a class="navigation-link navigation-link-text" href="#">
@@ -113,7 +113,7 @@
                       <p class="cart-item-subtitle">1 кг х 310 ₽</p>
                     </div>
                     <p class="cart-item-price">310 ₽</p>
-                    <button type="button" class="cart-item-button button">
+                    <button type="button" class="cart-item-button">
                       <svg width="16" height="16" fill="none" viewBox="0 0 16 16">
                         <path fill="currentColor" fill-rule="evenodd"
                           d="M12.803 4.138a.667.667 0 1 0-.943-.943L8 7.056l-3.862-3.86a.667.667 0 1 0-.943.942L7.056 8l-3.86 3.861a.667.667 0 1 0 .942.943L8 8.942l3.861 3.861a.667.667 0 1 0 .943-.943L8.942 8l3.861-3.862Z"
@@ -130,7 +130,7 @@
                       <p class="cart-item-subtitle">1,5 кг х 320 ₽</p>
                     </div>
                     <p class="cart-item-price">480 ₽</p>
-                    <button type="button" class="cart-item-button button">
+                    <button type="button" class="cart-item-button">
                       <svg width="16" height="16" fill="none" viewBox="0 0 16 16">
                         <path fill="currentColor" fill-rule="evenodd"
                           d="M12.803 4.138a.667.667 0 1 0-.943-.943L8 7.056l-3.862-3.86a.667.667 0 1 0-.943.942L7.056 8l-3.86 3.861a.667.667 0 1 0 .942.943L8 8.942l3.861 3.861a.667.667 0 1 0 .943-.943L8.942 8l3.861-3.862Z"
@@ -418,23 +418,61 @@
                 подтвердить заказ.</p>
               <form class="appointment-form" action="https://echo.htmlacademy.ru/" method="post">
                 <p class="appointment-form-date field-group">
-                  <label class="form-label" for="appointment-date">Дата</label>
-                  <button class="info">
-                    <span class="visually-hidden">Посмотреть дополнительную информацию</span></button>
+                  <span class="form-label  form-label-icon">
+                    <label class="form-label" for="appointment-date">Дата</label>
+                    <span class="tooltip">
+                      <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label-date">
+                        <svg class="tooltip-icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                          fill="currentColor" viewBox="0 0 14 14">
+                          <g clip-path="url(#a)">
+                            <path fill-rule="evenodd"
+                              d="M7 2.125a4.875 4.875 0 1 0 0 9.75 4.875 4.875 0 0 0 0-9.75ZM.792 7a6.209 6.209 0 1 1 12.417 0A6.209 6.209 0 0 1 .792 7ZM7 6.333c.368 0 .667.299.667.667v2.217a.667.667 0 0 1-1.334 0V7c0-.368.299-.667.667-.667Zm0-2.216A.667.667 0 0 0 7 5.45h.006a.667.667 0 0 0 0-1.333H7Z"
+                              clip-rule="evenodd" />
+                          </g>
+                          <defs>
+                            <clipPath id="a">
+                              <path fill="#fff" d="M0 0h14v14H0z" />
+                            </clipPath>
+                          </defs>
+                        </svg>
+                      </button>
+                      <span class="tooltip-text" role="tooltip" id="tooltip-label-date">Укажите желаемую дату
+                        доставки</span>
+                    </span>
+                  </span>
                   <input class="field" type="text" id="appointment-date" name="appointment-date"
-                    placeholder="01.04.2020">
+                    placeholder="01.04.2020" required>
                 </p>
                 <p class="appointment-form-phone field-group">
                   <label class="form-label" for="appointment-phone">Телефон</label>
                   <input class="field" type="text" id="appointment-phone" name="appointment-phone"
-                    placeholder="+7 800 999-00-00">
+                    placeholder="+7 800 999-00-00" required>
                 </p>
                 <p class="appointment-form-adress field-group">
-                  <label class="form-label" for="appointment-adress">Адрес</label>
-                  <button class="info">
-                    <span class="visually-hidden">Посмотреть дополнительную информацию</span></button>
+                  <span class="form-label form-label-icon">
+                    <label class="form-label" for="appointment-adress">Адрес</label>
+                    <span class="tooltip">
+                      <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label-date">
+                        <svg class="tooltip-icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                          fill="currentColor" viewBox="0 0 14 14">
+                          <g clip-path="url(#a)">
+                            <path fill-rule="evenodd"
+                              d="M7 2.125a4.875 4.875 0 1 0 0 9.75 4.875 4.875 0 0 0 0-9.75ZM.792 7a6.209 6.209 0 1 1 12.417 0A6.209 6.209 0 0 1 .792 7ZM7 6.333c.368 0 .667.299.667.667v2.217a.667.667 0 0 1-1.334 0V7c0-.368.299-.667.667-.667Zm0-2.216A.667.667 0 0 0 7 5.45h.006a.667.667 0 0 0 0-1.333H7Z"
+                              clip-rule="evenodd" />
+                          </g>
+                          <defs>
+                            <clipPath id="a">
+                              <path fill="#fff" d="M0 0h14v14H0z" />
+                            </clipPath>
+                          </defs>
+                        </svg>
+                      </button>
+                      <span class="tooltip-text" role="tooltip" id="tooltip-label-date">Введите название улицы, дома и
+                        квартиры</span>
+                    </span>
+                  </span>
                   <input class="field" type="text" id="appointment-adress" name="appointment-adress"
-                    placeholder="ул. Большая Конюшенная, 19/8">
+                    placeholder="ул. Большая Конюшенная, 19/8" required>
                 </p>
                 <button class="button appointment-button" type="submit">Отправить</button>
               </form>
@@ -523,15 +561,18 @@
           <form class="feedback-form" action="https://echo.htmlacademy.ru/" method="post">
             <p class="field-group">
               <label class="visually-hidden" for="feedback-name">Имя и фамилия</label>
-              <input class="feedback-form-field field" type="text" id="feedback-name" name="feedback-name" placeholder="Имя и фамилия">
+              <input class="feedback-form-field field" type="text" id="feedback-name" name="feedback-name"
+                placeholder="Имя и фамилия" required>
             </p>
             <p class="field-group">
               <label class="visually-hidden" for="feedback-email">Пароль</label>
-              <input class="feedback-form-field field" type="email" id="feedback-email" name="feedback-email" placeholder="email@example.com">
+              <input class="feedback-form-field field" type="email" id="feedback-email" name="feedback-email"
+                placeholder="email@example.com" required>
             </p>
             <p class="field-group">
               <label class="visually-hidden" for="feedback-request">В свободной форме</label>
-              <textarea class="feedback-form-field field" name="feedback-request" id="feedback-request" cols="30" rows="6" placeholder="В свободной форме"></textarea>
+              <textarea class="feedback-form-field field" name="feedback-request" id="feedback-request" cols="30"
+                rows="6" placeholder="В свободной форме"></textarea>
             </p>
             <button class="button feedback-button" type="submit">Отправить</button>
           </form>
