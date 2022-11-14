@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <title>Каталог</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" href="favicon.ico"><!-- 32×32 -->
   </head>
 
   <body>
@@ -183,16 +184,18 @@
               </select>
             </fieldset>
             <fieldset class="catalog-filter-group">
-              <legend class="catalog-filter-title">Цена:</legend>
+              <legend class="catalog-filter-title">
+                <span>Цена:</span>
+                <span class="range-wrapper-inputs">
+                  <label class="catalog-filter-label">
+                    <input class="range-input" type="number" value="100" name="min-price"> ₽ &#8211;
+                  </label>
+                  <label class="catalog-filter-label">
+                    <input class="range-input" type="number" value="500" name="max-price"> ₽
+                  </label>
+                </span>
+              </legend>
               <div class="range">
-                <div class="range-wrapper-inputs">
-                  <label class="catalog-filter-label">
-                    <input class="range-input" type="number" value="100" name="min-price"> ₽
-                  </label>
-                  <label class="catalog-filter-label">
-                    &#8211;<input class="range-input" type="number" value="500" name="max-price"> ₽
-                  </label>
-                </div>
                 <div class="range-wrapper">
                   <div class="range-scale">
                     <div class="range-bar" style="left: 32px; width: 72px">

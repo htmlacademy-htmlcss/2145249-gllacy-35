@@ -27,6 +27,7 @@ html {
 }
 
 body {
+    min-width: 1366px;
     margin: 0;
     display: flex;
     flex-direction: column;
@@ -142,7 +143,7 @@ body {
 .navigation-link {
     position: relative;
     display: block;
-    padding: 16px;
+    padding: 8px 16px;
     line-height: 20px;
     text-align: center;
     text-decoration: none;
@@ -195,6 +196,7 @@ body {
 .navigation-user .link-phone:focus,
 .navigation-user .link-phone:active {
     background-color: inherit;
+    padding: 8px 16px;
     padding-right: 0;
 }
 
@@ -212,19 +214,19 @@ body {
     padding-left: 38px;
 }
 
-.navigation-link-text .navigation-icon {
-    right: auto;
-    left: 18px;
-    margin: auto 0;
-}
-
 .navigation-icon {
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    margin: auto;
+    margin: 8px auto;
+}
+
+.navigation-link-text .navigation-icon {
+    right: auto;
+    left: 18px;
+    margin: auto 0;
 }
 
 .logo {
@@ -308,7 +310,7 @@ body {
 
 .slider-next {
     left: 314px;
-    bottom: 235px;
+    top: 235px;
 }
 
 .slider-button-icon {
@@ -343,6 +345,7 @@ body {
 
 .choice-container {
     margin-left: auto;
+    max-width: 473px;
 }
 
 .choice-slider {
@@ -533,7 +536,7 @@ body {
     border-radius: 16px;
     background-size: 219px 268px;
     background-repeat: no-repeat;
-    background-position: right;
+    background-position: bottom right;
     padding: 36px;
     box-sizing: border-box;
 }
@@ -556,6 +559,7 @@ body {
 
 .button-present {
     box-sizing: border-box;
+    max-width: 328px;
 }
 
 .present-description {
@@ -816,13 +820,14 @@ body {
 
 /* subscribe */
 .subscribe {
+    display: flex;
     background-image: url(../images/backgroungs/mail.png);
     background-size: cover;
     width: 570px;
     min-height: 224px;
     background-repeat: no-repeat;
     border-radius: 16px;
-    padding-top: 6px;
+    padding: 6px;
     box-sizing: border-box;
     margin-bottom: 80px;
 }
@@ -846,6 +851,7 @@ body {
 .subscribe-form {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .field-email {
@@ -1159,7 +1165,7 @@ body {
 }
 
 .footer-navigation-item {
-    vertical-align: center;
+    max-width: 200px;
 }
 
 .footer-about {
@@ -1297,19 +1303,16 @@ body {
 }
 
 .catalog-filter > *:not(:last-child):not(:nth-child(4n)) {
-    margin-bottom: 16px;
-}
-
-.catalog-filter-item {
-    display: inline;
+    margin-bottom: 18px;
 }
 
 .catalog-filter-title {
+    display: flex;
     font-size: 14px;
     line-height: 20px;
     font-weight: 400;
     margin-left: 16px;
-    margin-bottom: 8px;
+    margin-bottom: 7px;
 }
 
 .range {
@@ -1379,20 +1382,19 @@ body {
 
 .range-wrapper-inputs {
     display: flex;
-    position: absolute;
-    margin-top: -28px;
-    margin-left: 52px;
-
+    margin-bottom: -8px;
 }
 
 .catalog-filter-label {
     display: flex;
     margin-right: 5px;
+    margin-bottom: 8px;
 }
 
 .range-input {
     width: 30px;
     padding: 0 2px;
+    margin-left: -5px;
     font: inherit;
     text-align: center;
     background-color: transparent;
@@ -1463,6 +1465,8 @@ body {
 }
 
 .catalog-filter-list {
+    display: flex;
+    list-style-type: none;
     background: rgba(252, 252, 252, 0.3);
     border-radius: 18px;
     padding: 8px 24px;
@@ -1470,7 +1474,7 @@ body {
 }
 
 .catalog-filter-item:not(:last-child) {
-    margin-right: 13px;
+    margin-right: 17px;
 }
 
 .button-catalog[type="submit"] {
@@ -1485,6 +1489,7 @@ body {
     align-self: flex-end;
     width: 185px;
     padding: 8px 52px;
+    margin-top: 16px;
     font-family: inherit;
     border: none;
     cursor: pointer;
@@ -1513,6 +1518,7 @@ body {
 
 .pagination-show-more {
     margin: 0 auto;
+    max-width: 600px;
 }
 
 .pagination {
@@ -1528,8 +1534,8 @@ body {
     color: #2D3440;
     text-decoration: none;
     display: block;
-    width: 24px;
-    height: 24px;
+    min-width: 24px;
+    min-height: 24px;
     text-align: center;
     vertical-align: middle;
     border-radius: 50%;
@@ -1555,18 +1561,16 @@ body {
 
 .pagination-prev {
     background-image: url("../images/catalog/arrow-left.svg");
-    background-position: center;
+    background-position: left;
     background-size: 16px 16px;
     background-repeat: no-repeat;
-    background-position: left;
 }
 
 .pagination-next {
     background: url("../images/catalog/arrow-right.svg");
-    background-position: center;
+    background-position: right;
     background-size: 16px 16px;
     background-repeat: no-repeat;
-    background-position: right;
 }
 
 /* popovers */
