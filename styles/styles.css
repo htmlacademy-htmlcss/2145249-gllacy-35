@@ -285,7 +285,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 80px;
-    padding-top: 21px;
+    padding-top: 10px;
 }
 
 .slider-container {
@@ -304,13 +304,13 @@ body {
 }
 
 .slider-prev {
-    left: 2px;
-    top: 235px;
+    left: 42px;
+    top: 245px;
 }
 
 .slider-next {
-    left: 314px;
-    top: 235px;
+    left: 354px;
+    top: 245px;
 }
 
 .slider-button-icon {
@@ -345,15 +345,16 @@ body {
 
 .choice-container {
     margin-left: auto;
-    max-width: 473px;
+    max-width: 430px;
 }
 
 .choice-slider {
     display: flex;
     min-width: 630px;
-    min-height: 507px;
+    min-height: 486px;
     justify-content: space-between;
     align-items: center;
+    list-style-type: none;
 }
 
 .choice-slider-next,
@@ -468,7 +469,7 @@ body {
     line-height: 46px;
     width: 470px;
     min-height: 92px;
-    margin-top: 111px;
+    margin-top: 123px;
     margin-bottom: 24px;
 }
 
